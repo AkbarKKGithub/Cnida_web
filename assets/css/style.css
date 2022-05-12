@@ -333,10 +333,22 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 80vh;
-  background-color: #2d1f5e;
+  
+  overflow: hidden;
+    background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgb(51, 102, 255,0.8), rgb(51, 102, 255,0.8)), url("../img/back.jpg");
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgb(0, 0, 153,0.8)), url("../img/back.jpg"); /* The least supported option. */
+
+  background-color: #cccccc; /* Used if the image is unavailable */
+
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 #hero .container {
   padding-top: 72px;
